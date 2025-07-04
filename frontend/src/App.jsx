@@ -25,6 +25,7 @@ import AuthPage from "./pages/admin/AuthPage";
 import ProtectedRoutes from "./pages/admin/ProtectedRoutes";
 import AllPosts from "./pages/admin/AllPosts";
 import Logout from "./pages/admin/Logout";
+import SingleBlog from "./components/client/SingleBlog";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
       <Route path="/auth" element={<AuthPage />} />
       <Route element={<ClientLayout />}>
         <Route index element={<Home />} />
+        <Route path="blogs/:id" element={<SingleBlog />} />
         <Route path="about" element={<About />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="contact" element={<Contact />} />
